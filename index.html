@@ -2,138 +2,71 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Veronica's Patisserie — авторские торты, десерты, праздничные наборы и выпечка ручной работы."
-    >
+    <meta name="description" content="Veronica's Patisserie — авторские торты, десерты и праздничные наборы ручной работы.">
 
-    <title>Veronica's Patisserie — Авторские десерты</title>
+    <title>Veronica's Patisserie</title>
 
-    <!-- =========================
-         GOOGLE FONTS
-    ========================== -->
-
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-    <!-- =========================
-         SWIPER CSS
-    ========================== -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    >
-
-
-    <!-- =========================
-         OUR STYLES
-         Подключим на следующем этапе
-    ========================== -->
-
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-
-    <!-- ============================================
-         CUSTOM CURSOR
-    ============================================= -->
-
-    <div class="cursor">
-        <span class="cursor__dot"></span>
-        <span class="cursor__ring"></span>
-    </div>
-
-
-    <!-- ============================================
-         PAGE LOADER
-    ============================================= -->
+    <!-- LOADER -->
 
     <div class="loader" id="loader">
+        <div class="loader-content">
+            <span>MAISON DE PÂTISSERIE</span>
+            <h1>Veronica's</h1>
 
-        <div class="loader__content">
-
-            <span class="loader__eyebrow">
-                Maison de Pâtisserie
-            </span>
-
-            <div class="loader__logo">
-                Veronica's
+            <div class="loader-line">
+                <div></div>
             </div>
-
-            <div class="loader__line">
-                <span></span>
-            </div>
-
         </div>
-
     </div>
 
 
-    <!-- ============================================
-         HEADER
-    ============================================= -->
+    <!-- CURSOR -->
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+
+    <!-- HEADER -->
 
     <header class="header">
 
-        <div class="container header__inner">
+        <div class="container header-inner">
 
-            <a href="#hero" class="logo">
-                <span class="logo__main">
-                    Veronica's
-                </span>
-
-                <span class="logo__sub">
-                    Patisserie
-                </span>
+            <a href="#home" class="logo">
+                <strong>Veronica's</strong>
+                <span>PATISSERIE</span>
             </a>
 
-
             <nav class="nav">
-
-                <a href="#catalog" class="nav__link">
-                    Каталог
-                </a>
-
-                <a href="#flavors" class="nav__link">
-                    Начинки
-                </a>
-
-                <a href="#quiz" class="nav__link">
-                    Найти свой вкус
-                </a>
-
-                <a href="#about" class="nav__link">
-                    О нас
-                </a>
-
+                <a href="#flavors">Вкусы</a>
+                <a href="#catalog">Каталог</a>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#quiz">Подобрать десерт</a>
+                <a href="#about">Обо мне</a>
             </nav>
 
-
-            <a
-                href="#order"
-                class="header__order"
-            >
+            <a href="#order" class="header-button">
                 Заказать
             </a>
 
-
-            <button
-                class="menu-toggle"
-                aria-label="Открыть меню"
-            >
+            <button class="menu-button" id="menuButton">
                 <span></span>
                 <span></span>
             </button>
@@ -145,93 +78,63 @@
 
     <main>
 
-
-        <!-- ============================================
+        <!-- ========================================
              HERO
-        ============================================= -->
+        ========================================= -->
 
-        <section
-            class="hero"
-            id="hero"
-        >
+        <section class="hero" id="home">
 
-            <div class="hero__decor hero__decor--left"></div>
-            <div class="hero__decor hero__decor--right"></div>
+            <div class="hero-glow"></div>
 
+            <div class="hero-ring ring-one"></div>
+            <div class="hero-ring ring-two"></div>
 
-            <div class="container hero__inner">
+            <div class="container hero-grid">
 
+                <div class="hero-content">
 
-                <!-- TEXT -->
+                    <span class="eyebrow">
+                        АВТОРСКАЯ КОНДИТЕРСКАЯ
+                    </span>
 
-                <div class="hero__content">
-
-                    <div class="hero__eyebrow">
-                        Авторская кондитерская
-                    </div>
-
-
-                    <h1 class="hero__title">
-
-                        <span class="hero__title-line">
-                            Десерты,
-                        </span>
-
-                        <span class="hero__title-line hero__title-line--accent">
-                            созданные
-                        </span>
-
-                        <span class="hero__title-line">
-                            как искусство
-                        </span>
-
+                    <h1>
+                        Десерты,
+                        <em>созданные</em>
+                        с любовью
                     </h1>
 
-
-                    <p class="hero__description">
-                        Авторские десерты с любовью.
+                    <p>
                         Свежая выпечка, праздничное оформление
-                        и волшебный вкус.
+                        и волшебный вкус. Каждый десерт создаётся
+                        вручную специально для вашего момента.
                     </p>
 
+                    <div class="hero-buttons">
 
-                    <div class="hero__actions">
-
-                        <a
-                            href="#catalog"
-                            class="btn btn--primary magnetic"
-                        >
+                        <a href="#catalog" class="button gold magnetic">
                             Смотреть каталог
-
-                            <span class="btn__arrow">
-                                ↗
-                            </span>
+                            <span>↗</span>
                         </a>
 
-
-                        <a
-                            href="#quiz"
-                            class="btn btn--ghost magnetic"
-                        >
+                        <a href="#quiz" class="button outline magnetic">
                             Найти свой вкус
                         </a>
 
                     </div>
 
+                    <div class="hero-info">
 
-                    <div class="hero__stats">
-
-                        <div class="hero-stat">
+                        <div>
                             <strong>100%</strong>
                             <span>ручная работа</span>
                         </div>
 
-                        <div class="hero-stat">
-                            <strong>Premium</strong>
-                            <span>ингредиенты</span>
+                        <div>
+                            <strong>Fresh</strong>
+                            <span>свежие продукты</span>
                         </div>
 
-                        <div class="hero-stat">
+                        <div>
                             <strong>Made</strong>
                             <span>with love</span>
                         </div>
@@ -241,54 +144,24 @@
                 </div>
 
 
-                <!-- INTERACTIVE CAKE -->
+                <div class="hero-visual" id="cakeScene">
 
-                <div
-                    class="hero__visual"
-                    id="cakeScene"
-                >
+                    <div class="hero-image-wrap" id="heroCake">
 
-                    <div class="hero__circle"></div>
-
-                    <div class="hero__gold-ring hero__gold-ring--one"></div>
-                    <div class="hero__gold-ring hero__gold-ring--two"></div>
-
-
-                    <div class="cake-stage">
-
-                        <div
-                            class="cake-parallax"
-                            id="heroCake"
+                        <img
+                            src="assets/Портфолио1.jpg"
+                            alt="Авторский торт Veronica's Patisserie"
                         >
-
-                            <!--
-                                Позже сюда можно поставить
-                                реальное PNG/WebP фото торта
-                                с прозрачным фоном.
-                            -->
-
-                            <img
-                                src="assets/hero-cake.png"
-                                alt="Авторский торт Veronica's Patisserie"
-                                class="hero__cake-image"
-                            >
-
-                        </div>
-
-
-                        <div class="cake-shadow"></div>
 
                     </div>
 
-
-                    <div class="floating-label floating-label--top">
+                    <div class="floating-tag tag-one">
                         <span>01</span>
                         Handmade
                     </div>
 
-
-                    <div class="floating-label floating-label--bottom">
-                        <span>Est.</span>
+                    <div class="floating-tag tag-two">
+                        <span>EST.</span>
                         Veronica's
                     </div>
 
@@ -296,326 +169,168 @@
 
             </div>
 
-
-            <div class="hero__scroll">
-
-                <span>
-                    Scroll
-                </span>
-
-                <div class="hero__scroll-line"></div>
-
+            <div class="scroll-label">
+                SCROLL
+                <span></span>
             </div>
 
         </section>
 
 
+        <!-- ========================================
+             FLAVORS
+        ========================================= -->
 
-        <!-- ============================================
-             FLAVORS / 3D SWIPER
-        ============================================= -->
-
-        <section
-            class="flavors section"
-            id="flavors"
-        >
+        <section class="section flavors" id="flavors">
 
             <div class="container">
 
+                <div class="section-title">
+                    <span>01 / ВКУСЫ</span>
 
-                <div class="section-heading">
-
-                    <span class="section-heading__number">
-                        01
-                    </span>
-
-                    <span class="section-heading__eyebrow">
-                        Создай свой десерт
-                    </span>
-
-                    <h2 class="section-heading__title">
-                        Выбери свой
-                        <em>идеальный вкус</em>
+                    <h2>
+                        Что скрывается
+                        <em>внутри?</em>
                     </h2>
 
-                    <p class="section-heading__description">
-                        Листай коллекцию начинок и найди
-                        сочетание, которое станет твоим.
+                    <p>
+                        Листайте разрезы и выбирайте вкус,
+                        который хочется попробовать первым.
                     </p>
-
                 </div>
 
 
-                <!-- SWIPER -->
-
-                <div class="flavor-swiper swiper">
+                <div class="swiper flavorSwiper">
 
                     <div class="swiper-wrapper">
 
-
-                        <!-- БИСКВИТ -->
-
                         <article
                             class="swiper-slide flavor-card"
-                            data-flavor="Бисквит"
-                            data-price="1400"
-                        >
-
-                            <span class="flavor-card__number">
-                                01
-                            </span>
-
-                            <div class="flavor-card__image">
-
-                                <img
-                                    src="assets/flavor-biscuit.jpg"
-                                    alt="Бисквит"
-                                >
-
-                            </div>
-
-                            <div class="flavor-card__content">
-
-                                <span class="flavor-card__type">
-                                    Основа
-                                </span>
-
-                                <h3>
-                                    Бисквит
-                                </h3>
-
-                                <p>
-                                    Воздушный классический бисквит
-                                    с нежной текстурой.
-                                </p>
-
-                            </div>
-
-                        </article>
-
-
-                        <!-- МЕДОВИК -->
-
-                        <article
-                            class="swiper-slide flavor-card"
-                            data-flavor="Медовик"
+                            data-name="Медовик"
                             data-price="1500"
                         >
 
-                            <span class="flavor-card__number">
-                                02
-                            </span>
+                            <img
+                                src="assets/РазрезМедовик.jpg"
+                                alt="Разрез Медовика"
+                            >
 
-                            <div class="flavor-card__image">
-
-                                <img
-                                    src="assets/flavor-honey.jpg"
-                                    alt="Медовик"
-                                >
-
-                            </div>
-
-                            <div class="flavor-card__content">
-
-                                <span class="flavor-card__type">
-                                    Bestseller
-                                </span>
-
-                                <h3>
-                                    Медовик
-                                </h3>
-
+                            <div class="flavor-overlay">
+                                <span>Классика</span>
+                                <h3>Медовик</h3>
                                 <p>
                                     Тонкие медовые коржи
                                     и нежный сливочный крем.
                                 </p>
-
                             </div>
 
                         </article>
 
-
-                        <!-- CENTER CAKE -->
-
-                        <article
-                            class="swiper-slide flavor-card flavor-card--featured"
-                            data-flavor="Авторский торт"
-                            data-price="2200"
-                        >
-
-                            <span class="flavor-card__number">
-                                Signature
-                            </span>
-
-                            <div class="flavor-card__image">
-
-                                <img
-                                    src="assets/signature-cake.png"
-                                    alt="Авторский торт"
-                                >
-
-                            </div>
-
-                            <div class="flavor-card__content">
-
-                                <span class="flavor-card__type">
-                                    Veronica's Selection
-                                </span>
-
-                                <h3>
-                                    Signature
-                                </h3>
-
-                                <p>
-                                    Авторское сочетание вкуса,
-                                    текстуры и оформления.
-                                </p>
-
-                            </div>
-
-                        </article>
-
-
-                        <!-- CREAM CHEESE -->
 
                         <article
                             class="swiper-slide flavor-card"
-                            data-flavor="Крем-чиз"
-                            data-price="1700"
+                            data-name="Молочная девочка"
+                            data-price="1600"
                         >
 
-                            <span class="flavor-card__number">
-                                03
-                            </span>
+                            <img
+                                src="assets/РазрезМолочнаяДевочка.jpg"
+                                alt="Разрез торта Молочная девочка"
+                            >
 
-                            <div class="flavor-card__image">
-
-                                <img
-                                    src="assets/flavor-cheese.jpg"
-                                    alt="Крем-чиз"
-                                >
-
-                            </div>
-
-                            <div class="flavor-card__content">
-
-                                <span class="flavor-card__type">
-                                    Крем
-                                </span>
-
-                                <h3>
-                                    Крем-чиз
-                                </h3>
-
+                            <div class="flavor-overlay">
+                                <span>Нежный вкус</span>
+                                <h3>Молочная девочка</h3>
                                 <p>
-                                    Бархатистый сливочный крем
-                                    с деликатной кислинкой.
+                                    Мягкие коржи и лёгкий
+                                    сливочный крем.
                                 </p>
-
                             </div>
 
                         </article>
 
 
-                        <!-- CURD -->
-
                         <article
-                            class="swiper-slide flavor-card"
-                            data-flavor="Курд"
+                            class="swiper-slide flavor-card featured"
+                            data-name="Авторский торт"
                             data-price="1800"
                         >
 
-                            <span class="flavor-card__number">
-                                04
-                            </span>
+                            <img
+                                src="assets/Портфолио2.jpg"
+                                alt="Авторский торт"
+                            >
 
-                            <div class="flavor-card__image">
-
-                                <img
-                                    src="assets/flavor-curd.jpg"
-                                    alt="Фруктовый курд"
-                                >
-
-                            </div>
-
-                            <div class="flavor-card__content">
-
-                                <span class="flavor-card__type">
-                                    Акцент
-                                </span>
-
-                                <h3>
-                                    Курд
-                                </h3>
-
+                            <div class="flavor-overlay">
+                                <span>Veronica's Selection</span>
+                                <h3>Signature</h3>
                                 <p>
-                                    Яркая фруктовая начинка
-                                    для свежего вкусового акцента.
+                                    Авторское сочетание вкуса
+                                    и оформления.
                                 </p>
-
                             </div>
 
                         </article>
 
+
+                        <article
+                            class="swiper-slide flavor-card"
+                            data-name="Меренговый рулет"
+                            data-price="1500"
+                        >
+
+                            <img
+                                src="assets/МеренговыйРулет.jpg"
+                                alt="Меренговый рулет"
+                            >
+
+                            <div class="flavor-overlay">
+                                <span>Лёгкий</span>
+                                <h3>Меренговый рулет</h3>
+                                <p>
+                                    Воздушная меренга
+                                    и нежная начинка.
+                                </p>
+                            </div>
+
+                        </article>
 
                     </div>
 
 
-                    <div class="flavor-controls">
+                    <div class="swiper-controls">
 
-                        <button class="flavor-prev">
-                            ←
-                        </button>
+                        <button class="swiper-prev">←</button>
 
                         <div class="swiper-pagination"></div>
 
-                        <button class="flavor-next">
-                            →
-                        </button>
+                        <button class="swiper-next">→</button>
 
                     </div>
 
                 </div>
 
 
-                <!-- PRICE -->
+                <div class="flavor-choice">
 
-                <div class="flavor-result">
-
-                    <span class="flavor-result__label">
-                        Выбранный вкус
-                    </span>
-
-                    <strong
-                        class="flavor-result__name"
-                        id="selectedFlavor"
-                    >
-                        Авторский торт
-                    </strong>
-
-                    <div class="flavor-result__price">
-
-                        от
-
-                        <span id="flavorPrice">
-                            2 200
-                        </span>
-
-                        ₽
-
+                    <div>
+                        <small>ВЫБРАННЫЙ ВКУС</small>
+                        <strong id="selectedFlavor">
+                            Авторский торт
+                        </strong>
                     </div>
 
+                    <div class="flavor-price">
+                        от
+                        <strong id="flavorPrice">
+                            1 800
+                        </strong>
+                        ₽
+                    </div>
 
-                    <a
-                        href="#"
-                        class="btn btn--telegram magnetic"
-                        id="telegramOrder"
-                    >
-                        Заказать в Telegram
-
-                        <span>
-                            ↗
-                        </span>
+                    <a href="#order" class="button blue">
+                        Заказать
+                        <span>↗</span>
                     </a>
 
                 </div>
@@ -625,396 +340,70 @@
         </section>
 
 
-
-        <!-- ============================================
-             QUIZ
-        ============================================= -->
-
-        <section
-            class="quiz section"
-            id="quiz"
-        >
-
-            <div class="container quiz__container">
-
-
-                <div class="quiz__intro">
-
-                    <span class="section-heading__number">
-                        02
-                    </span>
-
-                    <span class="section-heading__eyebrow">
-                        Taste finder
-                    </span>
-
-                    <h2>
-                        Найди свой
-                        <em>идеальный десерт</em>
-                    </h2>
-
-                    <p>
-                        Три вопроса.
-                        Один десерт, который тебе действительно подойдёт.
-                    </p>
-
-                </div>
-
-
-                <div
-                    class="quiz-box"
-                    id="quizBox"
-                >
-
-
-                    <!-- PROGRESS -->
-
-                    <div class="quiz-progress">
-
-                        <span id="quizCurrent">
-                            01
-                        </span>
-
-                        <div class="quiz-progress__line">
-
-                            <span
-                                id="quizProgressBar"
-                            ></span>
-
-                        </div>
-
-                        <span>
-                            03
-                        </span>
-
-                    </div>
-
-
-
-                    <!-- STEP 1 -->
-
-                    <div
-                        class="quiz-step active"
-                        data-step="1"
-                    >
-
-                        <span class="quiz-step__eyebrow">
-                            Вопрос первый
-                        </span>
-
-                        <h3>
-                            Какой вкус тебе ближе?
-                        </h3>
-
-
-                        <div class="quiz-options">
-
-                            <button
-                                class="quiz-option"
-                                data-answer="chocolate"
-                            >
-                                <span>01</span>
-                                Шоколад
-                            </button>
-
-
-                            <button
-                                class="quiz-option"
-                                data-answer="berry"
-                            >
-                                <span>02</span>
-                                Ягоды
-                            </button>
-
-
-                            <button
-                                class="quiz-option"
-                                data-answer="honey"
-                            >
-                                <span>03</span>
-                                Мёд
-                            </button>
-
-
-                            <button
-                                class="quiz-option"
-                                data-answer="cream"
-                            >
-                                <span>04</span>
-                                Сливочный
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- STEP 2 -->
-
-                    <div
-                        class="quiz-step"
-                        data-step="2"
-                    >
-
-                        <span class="quiz-step__eyebrow">
-                            Вопрос второй
-                        </span>
-
-                        <h3>
-                            Какой десерт хочется сегодня?
-                        </h3>
-
-
-                        <div class="quiz-options">
-
-                            <button
-                                class="quiz-option"
-                                data-answer="cake"
-                            >
-                                <span>01</span>
-                                Торт
-                            </button>
-
-
-                            <button
-                                class="quiz-option"
-                                data-answer="light"
-                            >
-                                <span>02</span>
-                                Что-нибудь лёгкое
-                            </button>
-
-
-                            <button
-                                class="quiz-option"
-                                data-answer="box"
-                            >
-                                <span>03</span>
-                                Набор десертов
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- STEP 3 -->
-
-                    <div
-                        class="quiz-step"
-                        data-step="3"
-                    >
-
-                        <span class="quiz-step__eyebrow">
-                            Последний вопрос
-                        </span>
-
-                        <h3>
-                            Для какого случая?
-                        </h3>
-
-
-                        <div class="quiz-options">
-
-                            <button
-                                class="quiz-option"
-                                data-answer="myself"
-                            >
-                                <span>01</span>
-                                Для себя
-                            </button>
-
-
-                            <button
-                                class="quiz-option"
-                                data-answer="gift"
-                            >
-                                <span>02</span>
-                                В подарок
-                            </button>
-
-
-                            <button
-                                class="quiz-option"
-                                data-answer="celebration"
-                            >
-                                <span>03</span>
-                                На праздник
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- RESULT -->
-
-                    <div
-                        class="quiz-result"
-                        id="quizResult"
-                    >
-
-                        <span class="quiz-result__eyebrow">
-                            Твой идеальный выбор
-                        </span>
-
-
-                        <div class="quiz-result__image">
-
-                            <img
-                                id="quizResultImage"
-                                src="assets/dubai-chocolate.jpg"
-                                alt=""
-                            >
-
-                        </div>
-
-
-                        <h3 id="quizResultTitle">
-                            Дубайский шоколад
-                        </h3>
-
-
-                        <p id="quizResultDescription">
-                            Насыщенный шоколадный вкус
-                            и премиальная текстура.
-                        </p>
-
-
-                        <div
-                            class="quiz-result__price"
-                            id="quizResultPrice"
-                        >
-                            от 1 200 ₽
-                        </div>
-
-
-                        <button
-                            class="btn btn--ghost"
-                            id="restartQuiz"
-                        >
-                            Пройти ещё раз
-                        </button>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ============================================
+        <!-- ========================================
              CATALOG
-        ============================================= -->
+        ========================================= -->
 
-        <section
-            class="catalog section"
-            id="catalog"
-        >
+        <section class="section catalog" id="catalog">
 
             <div class="container">
 
+                <div class="section-title">
+                    <span>02 / КОЛЛЕКЦИЯ</span>
 
-                <div class="section-heading">
-
-                    <span class="section-heading__number">
-                        03
-                    </span>
-
-                    <span class="section-heading__eyebrow">
-                        Collection
-                    </span>
-
-                    <h2 class="section-heading__title">
-                        Коллекция
-                        <em>Veronica's</em>
+                    <h2>
+                        Выберите
+                        <em>свой десерт</em>
                     </h2>
-
                 </div>
 
 
+                <div class="filters">
 
-                <!-- FILTERS -->
-
-                <div class="catalog-filters">
-
-                    <button
-                        class="filter-btn active"
-                        data-filter="all"
-                    >
+                    <button class="filter active" data-filter="all">
                         Все
                     </button>
 
-                    <button
-                        class="filter-btn"
-                        data-filter="newyear"
-                    >
+                    <button class="filter" data-filter="newyear">
                         Новый год
                     </button>
 
-                    <button
-                        class="filter-btn"
-                        data-filter="easter"
-                    >
+                    <button class="filter" data-filter="easter">
                         Пасха
                     </button>
 
-                    <button
-                        class="filter-btn"
-                        data-filter="cakes"
-                    >
+                    <button class="filter" data-filter="cakes">
                         Торты
                     </button>
 
-                    <button
-                        class="filter-btn"
-                        data-filter="sets"
-                    >
+                    <button class="filter" data-filter="sets">
                         Наборы
                     </button>
 
                 </div>
 
 
-
-                <!-- PRODUCTS -->
-
                 <div class="catalog-grid">
 
 
-                    <!-- PRODUCT -->
+                    <!-- 1 -->
 
-                    <article
-                        class="product-card tilt-card"
-                        data-category="newyear sets"
-                    >
+                    <article class="product tilt" data-category="newyear sets">
 
-                        <div class="product-card__image">
+                        <div class="product-image">
 
                             <img
-                                src="assets/new-year-box.jpg"
-                                alt="Праздничный ассорти-бокс"
+                                src="assets/Новогоднийбокс.jpg"
+                                alt="Новогодний бокс"
                             >
 
-                            <span class="product-card__tag">
-                                Новый год
-                            </span>
+                            <span>НОВЫЙ ГОД</span>
 
                         </div>
 
+                        <div class="product-content">
 
-                        <div class="product-card__content">
-
-                            <span class="product-card__number">
-                                01
-                            </span>
+                            <small>01</small>
 
                             <h3>
                                 Праздничный ассорти-бокс
@@ -1025,16 +414,9 @@
                                 Медовик и Графские развалины.
                             </p>
 
-                            <div class="product-card__footer">
-
-                                <strong>
-                                    1 900 ₽
-                                </strong>
-
-                                <button class="product-card__button">
-                                    ↗
-                                </button>
-
+                            <div>
+                                <strong>1 900 ₽</strong>
+                                <a href="#order">↗</a>
                             </div>
 
                         </div>
@@ -1042,53 +424,37 @@
                     </article>
 
 
+                    <!-- 2 -->
 
-                    <!-- PRODUCT -->
+                    <article class="product tilt" data-category="newyear sets">
 
-                    <article
-                        class="product-card tilt-card"
-                        data-category="newyear sets"
-                    >
-
-                        <div class="product-card__image">
+                        <div class="product-image">
 
                             <img
-                                src="assets/gingerbread-house.jpg"
+                                src="assets/Набордляпряничногодомика.jpg"
                                 alt="Набор для пряничного домика"
                             >
 
-                            <span class="product-card__tag">
-                                Новый год
-                            </span>
+                            <span>НОВЫЙ ГОД</span>
 
                         </div>
 
+                        <div class="product-content">
 
-                        <div class="product-card__content">
-
-                            <span class="product-card__number">
-                                02
-                            </span>
+                            <small>02</small>
 
                             <h3>
                                 Пряничный домик
                             </h3>
 
                             <p>
-                                Набор деталей
-                                для самостоятельной сборки.
+                                Детали для самостоятельной
+                                сборки праздничного домика.
                             </p>
 
-                            <div class="product-card__footer">
-
-                                <strong>
-                                    700 ₽
-                                </strong>
-
-                                <button class="product-card__button">
-                                    ↗
-                                </button>
-
+                            <div>
+                                <strong>700 ₽</strong>
+                                <a href="#order">↗</a>
                             </div>
 
                         </div>
@@ -1096,107 +462,37 @@
                     </article>
 
 
+                    <!-- 3 -->
 
-                    <!-- PRODUCT -->
+                    <article class="product tilt" data-category="easter">
 
-                    <article
-                        class="product-card tilt-card"
-                        data-category="easter"
-                    >
-
-                        <div class="product-card__image">
+                        <div class="product-image">
 
                             <img
-                                src="assets/easter-cake.jpg"
-                                alt="Творожный кулич"
+                                src="assets/ПасхаТришоколада.jpg"
+                                alt="Пасхальный десерт"
                             >
 
-                            <span class="product-card__tag">
-                                Пасха
-                            </span>
+                            <span>ПАСХА</span>
 
                         </div>
 
+                        <div class="product-content">
 
-                        <div class="product-card__content">
-
-                            <span class="product-card__number">
-                                03
-                            </span>
-
-                            <h3>
-                                Творожный кулич
-                            </h3>
-
-                            <p>
-                                Нежный праздничный кулич
-                                на творожной основе.
-                            </p>
-
-                            <div class="product-card__footer">
-
-                                <strong>
-                                    от 200 ₽
-                                </strong>
-
-                                <button class="product-card__button">
-                                    ↗
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PRODUCT -->
-
-                    <article
-                        class="product-card tilt-card"
-                        data-category="easter"
-                    >
-
-                        <div class="product-card__image">
-
-                            <img
-                                src="assets/easter-paskha.jpg"
-                                alt="Заварная пасха"
-                            >
-
-                            <span class="product-card__tag">
-                                Пасха
-                            </span>
-
-                        </div>
-
-
-                        <div class="product-card__content">
-
-                            <span class="product-card__number">
-                                04
-                            </span>
+                            <small>03</small>
 
                             <h3>
                                 Заварная пасха
                             </h3>
 
                             <p>
-                                Традиционная праздничная пасха
+                                Праздничный десерт
                                 с нежной сливочной текстурой.
                             </p>
 
-                            <div class="product-card__footer">
-
-                                <strong>
-                                    от 1 400 ₽
-                                </strong>
-
-                                <button class="product-card__button">
-                                    ↗
-                                </button>
-
+                            <div>
+                                <strong>от 1 400 ₽</strong>
+                                <a href="#order">↗</a>
                             </div>
 
                         </div>
@@ -1204,33 +500,24 @@
                     </article>
 
 
+                    <!-- 4 -->
 
-                    <!-- PRODUCT -->
+                    <article class="product tilt" data-category="cakes">
 
-                    <article
-                        class="product-card tilt-card"
-                        data-category="cakes"
-                    >
-
-                        <div class="product-card__image">
+                        <div class="product-image">
 
                             <img
-                                src="assets/medovik.jpg"
+                                src="assets/Бентомедовик1кг.jpg"
                                 alt="Торт Медовик"
                             >
 
-                            <span class="product-card__tag">
-                                Bestseller
-                            </span>
+                            <span>BESTSELLER</span>
 
                         </div>
 
+                        <div class="product-content">
 
-                        <div class="product-card__content">
-
-                            <span class="product-card__number">
-                                05
-                            </span>
+                            <small>04</small>
 
                             <h3>
                                 Торт «Медовик»
@@ -1241,16 +528,9 @@
                                 и нежный сливочный крем.
                             </p>
 
-                            <div class="product-card__footer">
-
-                                <strong>
-                                    1 500 ₽ / кг
-                                </strong>
-
-                                <button class="product-card__button">
-                                    ↗
-                                </button>
-
+                            <div>
+                                <strong>1 500 ₽ / кг</strong>
+                                <a href="#order">↗</a>
                             </div>
 
                         </div>
@@ -1258,33 +538,24 @@
                     </article>
 
 
+                    <!-- 5 -->
 
-                    <!-- PRODUCT -->
+                    <article class="product tilt" data-category="cakes">
 
-                    <article
-                        class="product-card tilt-card"
-                        data-category="cakes"
-                    >
-
-                        <div class="product-card__image">
+                        <div class="product-image">
 
                             <img
-                                src="assets/dubai-chocolate.jpg"
+                                src="assets/Дубайскийшоколад.jpg"
                                 alt="Дубайский шоколад"
                             >
 
-                            <span class="product-card__tag">
-                                Signature
-                            </span>
+                            <span>SIGNATURE</span>
 
                         </div>
 
+                        <div class="product-content">
 
-                        <div class="product-card__content">
-
-                            <span class="product-card__number">
-                                06
-                            </span>
+                            <small>05</small>
 
                             <h3>
                                 Дубайский шоколад
@@ -1296,16 +567,9 @@
                                 Конфеты — 1 200 ₽
                             </p>
 
-                            <div class="product-card__footer">
-
-                                <strong>
-                                    от 1 200 ₽
-                                </strong>
-
-                                <button class="product-card__button">
-                                    ↗
-                                </button>
-
+                            <div>
+                                <strong>от 1 200 ₽</strong>
+                                <a href="#order">↗</a>
                             </div>
 
                         </div>
@@ -1313,29 +577,22 @@
                     </article>
 
 
+                    <!-- 6 -->
 
-                    <!-- PRODUCT -->
+                    <article class="product tilt" data-category="cakes">
 
-                    <article
-                        class="product-card tilt-card"
-                        data-category="cakes"
-                    >
-
-                        <div class="product-card__image">
+                        <div class="product-image">
 
                             <img
-                                src="assets/meringue-roll.jpg"
-                                alt="Меренговый рулет с малиной"
+                                src="assets/МеренговыйРулет.jpg"
+                                alt="Меренговый рулет"
                             >
 
                         </div>
 
+                        <div class="product-content">
 
-                        <div class="product-card__content">
-
-                            <span class="product-card__number">
-                                07
-                            </span>
+                            <small>06</small>
 
                             <h3>
                                 Меренговый рулет
@@ -1343,19 +600,12 @@
 
                             <p>
                                 Воздушная меренга,
-                                сливочный крем и малина.
+                                крем и ягоды.
                             </p>
 
-                            <div class="product-card__footer">
-
-                                <strong>
-                                    1 500 ₽
-                                </strong>
-
-                                <button class="product-card__button">
-                                    ↗
-                                </button>
-
+                            <div>
+                                <strong>1 500 ₽</strong>
+                                <a href="#order">↗</a>
                             </div>
 
                         </div>
@@ -1363,55 +613,114 @@
                     </article>
 
 
+                    <!-- 7 -->
 
-                    <!-- PRODUCT -->
+                    <article class="product tilt" data-category="sets">
 
-                    <article
-                        class="product-card tilt-card"
-                        data-category="sets"
-                    >
-
-                        <div class="product-card__image">
+                        <div class="product-image">
 
                             <img
-                                src="assets/grafskie.jpg"
-                                alt="Пирожные Графские развалины"
+                                src="assets/Капкейки Сникерс1.jpg"
+                                alt="Капкейки Сникерс"
+                            >
+
+                            <span>НАБОР</span>
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <small>07</small>
+
+                            <h3>
+                                Капкейки «Сникерс»
+                            </h3>
+
+                            <p>
+                                Шоколадные капкейки
+                                с насыщенной начинкой.
+                            </p>
+
+                            <div>
+                                <strong>по запросу</strong>
+                                <a href="#order">↗</a>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 8 -->
+
+                    <article class="product tilt" data-category="sets">
+
+                        <div class="product-image">
+
+                            <img
+                                src="assets/Клубника в белыйском шоколаде ручной работы.jpg"
+                                alt="Клубника в шоколаде"
                             >
 
                         </div>
 
+                        <div class="product-content">
 
-                        <div class="product-card__content">
-
-                            <span class="product-card__number">
-                                08
-                            </span>
+                            <small>08</small>
 
                             <h3>
-                                «Графские развалины»
+                                Клубника в шоколаде
                             </h3>
 
                             <p>
-                                Набор из шести
-                                авторских пирожных.
+                                Свежая клубника
+                                в белом шоколаде ручной работы.
                             </p>
 
-                            <div class="product-card__footer">
-
-                                <strong>
-                                    800 ₽
-                                </strong>
-
-                                <button class="product-card__button">
-                                    ↗
-                                </button>
-
+                            <div>
+                                <strong>по запросу</strong>
+                                <a href="#order">↗</a>
                             </div>
 
                         </div>
 
                     </article>
 
+
+                    <!-- 9 -->
+
+                    <article class="product tilt" data-category="cakes">
+
+                        <div class="product-image">
+
+                            <img
+                                src="assets/Тортпанчо.jpg"
+                                alt="Торт Панчо"
+                            >
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <small>09</small>
+
+                            <h3>
+                                Торт «Панчо»
+                            </h3>
+
+                            <p>
+                                Домашняя классика
+                                в авторском исполнении.
+                            </p>
+
+                            <div>
+                                <strong>по запросу</strong>
+                                <a href="#order">↗</a>
+                            </div>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
@@ -1420,38 +729,326 @@
         </section>
 
 
+        <!-- ========================================
+             PORTFOLIO
+        ========================================= -->
 
-        <!-- ============================================
-             ABOUT / BRAND STATEMENT
-        ============================================= -->
+        <section class="section portfolio" id="portfolio">
 
-        <section
-            class="about section"
-            id="about"
-        >
+            <div class="container">
 
-            <div class="container about__inner">
+                <div class="section-title portfolio-title">
 
+                    <span>03 / PORTFOLIO</span>
 
-                <div class="about__visual">
+                    <h2>
+                        Десерты,
+                        <em>созданные вручную</em>
+                    </h2>
 
-                    <img
-                        src="assets/about.jpg"
-                        alt="Veronica's Patisserie"
-                    >
-
-                    <span class="about__year">
-                        EST. 2026
-                    </span>
+                    <p>
+                        Каждый десерт я создаю вручную:
+                        от сочетания вкусов до финального оформления.
+                    </p>
 
                 </div>
 
 
-                <div class="about__content">
+                <div class="portfolio-grid">
 
-                    <span class="section-heading__eyebrow">
-                        Philosophy
-                    </span>
+                    <figure class="portfolio-item p-large">
+                        <img src="assets/Портфолио1.jpg" alt="Авторский десерт">
+                        <figcaption>
+                            <span>01</span>
+                            Veronica's Patisserie
+                        </figcaption>
+                    </figure>
+
+
+                    <figure class="portfolio-item">
+                        <img src="assets/Портфолио2.jpg" alt="Авторский десерт">
+                        <figcaption>
+                            <span>02</span>
+                            Handmade
+                        </figcaption>
+                    </figure>
+
+
+                    <figure class="portfolio-item p-tall">
+                        <img src="assets/Портфолио3.jpg" alt="Авторский десерт">
+                        <figcaption>
+                            <span>03</span>
+                            Made with love
+                        </figcaption>
+                    </figure>
+
+
+                    <figure class="portfolio-item">
+                        <img src="assets/Портфолио4.jpg" alt="Авторский десерт">
+                        <figcaption>
+                            <span>04</span>
+                            Signature
+                        </figcaption>
+                    </figure>
+
+
+                    <figure class="portfolio-item p-wide">
+                        <img src="assets/Портфолио5.jpg" alt="Авторский десерт">
+                        <figcaption>
+                            <span>05</span>
+                            Veronica's
+                        </figcaption>
+                    </figure>
+
+
+                    <figure class="portfolio-item">
+                        <img src="assets/Портфолио6.jpg" alt="Авторский десерт">
+                        <figcaption>
+                            <span>06</span>
+                            Patisserie
+                        </figcaption>
+                    </figure>
+
+
+                    <figure class="portfolio-item p-tall">
+                        <img src="assets/Портфолио7.jpg" alt="Авторский десерт">
+                        <figcaption>
+                            <span>07</span>
+                            Handmade
+                        </figcaption>
+                    </figure>
+
+
+                    <figure class="portfolio-item">
+                        <img src="assets/Портфолио8.jpg" alt="Авторский десерт">
+                        <figcaption>
+                            <span>08</span>
+                            Sweet moments
+                        </figcaption>
+                    </figure>
+
+
+                    <figure class="portfolio-item p-wide">
+                        <img src="assets/Портфолио9.jpg" alt="Авторский десерт">
+                        <figcaption>
+                            <span>09</span>
+                            Created by Veronica
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             QUIZ
+        ========================================= -->
+
+        <section class="section quiz" id="quiz">
+
+            <div class="container quiz-grid">
+
+                <div class="quiz-intro">
+
+                    <span>04 / TASTE FINDER</span>
+
+                    <h2>
+                        Найди свой
+                        <em>идеальный десерт</em>
+                    </h2>
+
+                    <p>
+                        Всего три вопроса,
+                        чтобы подобрать десерт под ваше настроение.
+                    </p>
+
+                </div>
+
+
+                <div class="quiz-box">
+
+                    <div class="quiz-progress">
+
+                        <span id="quizNumber">
+                            01
+                        </span>
+
+                        <div>
+                            <span id="quizBar"></span>
+                        </div>
+
+                        <span>03</span>
+
+                    </div>
+
+
+                    <!-- STEP 1 -->
+
+                    <div class="quiz-step active" data-step="1">
+
+                        <small>ВОПРОС ПЕРВЫЙ</small>
+
+                        <h3>
+                            Какой вкус вам ближе?
+                        </h3>
+
+                        <div class="quiz-options">
+
+                            <button data-answer="chocolate">
+                                <span>01</span>
+                                Шоколад
+                            </button>
+
+                            <button data-answer="berry">
+                                <span>02</span>
+                                Ягоды
+                            </button>
+
+                            <button data-answer="honey">
+                                <span>03</span>
+                                Мёд
+                            </button>
+
+                            <button data-answer="cream">
+                                <span>04</span>
+                                Сливочный
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 2 -->
+
+                    <div class="quiz-step" data-step="2">
+
+                        <small>ВОПРОС ВТОРОЙ</small>
+
+                        <h3>
+                            Что хочется сегодня?
+                        </h3>
+
+                        <div class="quiz-options">
+
+                            <button data-answer="cake">
+                                <span>01</span>
+                                Торт
+                            </button>
+
+                            <button data-answer="light">
+                                <span>02</span>
+                                Что-нибудь лёгкое
+                            </button>
+
+                            <button data-answer="set">
+                                <span>03</span>
+                                Набор
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 3 -->
+
+                    <div class="quiz-step" data-step="3">
+
+                        <small>ПОСЛЕДНИЙ ВОПРОС</small>
+
+                        <h3>
+                            Для какого случая?
+                        </h3>
+
+                        <div class="quiz-options">
+
+                            <button data-answer="myself">
+                                <span>01</span>
+                                Для себя
+                            </button>
+
+                            <button data-answer="gift">
+                                <span>02</span>
+                                В подарок
+                            </button>
+
+                            <button data-answer="party">
+                                <span>03</span>
+                                На праздник
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESULT -->
+
+                    <div class="quiz-result" id="quizResult">
+
+                        <span>
+                            ВАШ ИДЕАЛЬНЫЙ ВЫБОР
+                        </span>
+
+                        <img
+                            id="resultImage"
+                            src="assets/Дубайскийшоколад.jpg"
+                            alt=""
+                        >
+
+                        <h3 id="resultTitle">
+                            Дубайский шоколад
+                        </h3>
+
+                        <p id="resultText"></p>
+
+                        <strong id="resultPrice"></strong>
+
+                        <button id="restartQuiz" class="button outline">
+                            Пройти ещё раз
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             ABOUT
+        ========================================= -->
+
+        <section class="section about" id="about">
+
+            <div class="container about-grid">
+
+                <div class="about-images">
+
+                    <img
+                        src="assets/Портфолио6.jpg"
+                        alt="Десерт Veronica's Patisserie"
+                    >
+
+                    <div class="about-small-image">
+                        <img
+                            src="assets/Портфолио8.jpg"
+                            alt="Авторский десерт"
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <span>05 / МОЯ ФИЛОСОФИЯ</span>
 
                     <h2>
                         Красота,
@@ -1460,16 +1057,20 @@
                     </h2>
 
                     <p>
-                        Для нас десерт — это не просто сладкое.
-                        Это маленький ритуал, впечатление
-                        и часть важного момента.
+                        Для меня десерт — это не просто сладкое.
+                        Это часть праздника, подарок или маленький
+                        повод порадовать себя.
                     </p>
 
                     <p>
-                        Поэтому каждый заказ Veronica's создаётся
-                        вручную: от вкусового сочетания
-                        до последней детали оформления.
+                        Каждый заказ я создаю вручную,
+                        уделяя внимание вкусу, деталям
+                        и оформлению.
                     </p>
+
+                    <div class="signature">
+                        Veronica
+                    </div>
 
                 </div>
 
@@ -1478,25 +1079,20 @@
         </section>
 
 
+        <!-- ========================================
+             ORDER
+        ========================================= -->
 
-        <!-- ============================================
-             ORDER CTA
-        ============================================= -->
+        <section class="order" id="order">
 
-        <section
-            class="order"
-            id="order"
-        >
-
-            <div class="order__background-text">
+            <div class="order-word">
                 Veronica's
             </div>
 
+            <div class="container order-content">
 
-            <div class="container order__inner">
-
-                <span class="order__eyebrow">
-                    Your perfect dessert
+                <span>
+                    YOUR PERFECT DESSERT
                 </span>
 
                 <h2>
@@ -1505,143 +1101,72 @@
                 </h2>
 
                 <p>
-                    Расскажите нам о вашем празднике,
+                    Расскажите о празднике,
                     любимых вкусах или идее оформления.
                 </p>
 
-
                 <a
                     href="#"
-                    class="btn btn--telegram btn--large magnetic"
+                    class="button order-button magnetic"
+                    id="telegramButton"
                 >
                     Написать в Telegram
-
-                    <span>
-                        ↗
-                    </span>
+                    <span>↗</span>
                 </a>
 
             </div>
 
         </section>
 
-
     </main>
 
 
+    <!-- FOOTER -->
 
-    <!-- ============================================
-         FOOTER
-    ============================================= -->
+    <footer>
 
-    <footer class="footer">
+        <div class="container footer-grid">
 
-        <div class="container footer__inner">
-
-
-            <div class="footer__brand">
-
-                <div class="footer__logo">
-                    Veronica's
-                </div>
-
-                <span>
-                    Patisserie
-                </span>
-
+            <div class="footer-logo">
+                <strong>Veronica's</strong>
+                <span>PATISSERIE</span>
             </div>
 
-
-            <div class="footer__nav">
-
-                <a href="#catalog">
-                    Каталог
-                </a>
-
-                <a href="#flavors">
-                    Начинки
-                </a>
-
-                <a href="#quiz">
-                    Найти вкус
-                </a>
-
-                <a href="#about">
-                    О нас
-                </a>
-
+            <div class="footer-links">
+                <a href="#flavors">Вкусы</a>
+                <a href="#catalog">Каталог</a>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#about">Обо мне</a>
             </div>
 
-
-            <div class="footer__social">
-
-                <a href="#">
-                    Telegram ↗
-                </a>
-
-                <a href="#">
-                    Instagram ↗
-                </a>
-
+            <div class="footer-social">
+                <a href="#">Telegram ↗</a>
+                <a href="#">Instagram ↗</a>
             </div>
-
 
         </div>
 
-
-        <div class="container footer__bottom">
-
-            <span>
-                © 2026 Veronica's Patisserie
-            </span>
-
-            <span>
-                Made with love
-            </span>
-
+        <div class="container footer-bottom">
+            <span>© 2026 VERONICA'S PATISSERIE</span>
+            <span>HANDMADE WITH LOVE</span>
         </div>
 
     </footer>
 
 
-
-    <!-- ============================================
-         LIBRARIES
-    ============================================= -->
-
-
     <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- GSAP ScrollTrigger -->
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.min.js"></script>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js">
-    </script>
-
-
-    <!-- SWIPER -->
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
-    </script>
-
-
-    <!-- THREE.JS -->
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.min.js">
-    </script>
-
-
-    <!-- OUR JS -->
-
+    <!-- JS -->
     <script src="script.js"></script>
 
-
 </body>
-</html>
+                                </html>
